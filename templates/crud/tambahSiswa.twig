@@ -1,0 +1,33 @@
+<div class="modal modal-lg fade" tabindex="-1" id="tambahSiswaForm">
+	<div class="modal-dialog">
+		{# <div class="overlay rounded d-flex align-items-center justify-content-center d-none" id="dataLoader">
+			<span class="loader"></span>
+		</div> #}
+		<div class="modal-content">
+			<form method="post" enctype="multipart/form-data">
+				<div class="modal-header">
+					<h5 class="modal-title">Tambah Siswa</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label for="name" class="form-label">Nama Siswa</label>
+						<input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="nama" required>
+					</div>
+					<div class="mb-3">
+						<label for="gender" class="form-label">Jenis Kelamin</label>
+						<input type="text" class="form-control" id="gender" aria-describedby="emailHelp" name="gender" required>
+					</div>
+					<div class="mb-3">
+						<label for="nilai" class="form-label">Nilai Siswa</label>
+						<input type="number" class="form-control" id="nilai" aria-describedby="emailHelp" name="nilai" required min="1">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">Tambah Siswa</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

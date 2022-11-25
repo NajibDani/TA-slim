@@ -1,0 +1,42 @@
+{% extends "/layout/master.twig" %}
+{% set title = "Home" %}
+
+{% block css %}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+	<div class="container mt-3">
+		<div class="d-flex  justify-content-center my-3">
+			<h1 class="text-center display-5 mx-5">Daftar Siswa</h1>
+			<button class="btn btn-primary mb-2 mr-0" data-toggle="modal" id="modalTrigger" data-target="#tambahSiswaForm">Tambah Data</button>
+		</div>
+		<div class="table-responsive">
+		<table class="table table-hover table-striped table-bordered my-3">
+			<tr class="text-center thead-dark">
+				<th class="text-center">Siswa ID</th>
+				<th>Nama</th>
+				<th>Jenis Kelamin</th>
+				<th>Nilai</th>
+				<th></th>
+			</tr>
+			<tr>
+				<span class="siswa"></span>
+			</tr>
+		</table>
+		</div>
+	</div>
+
+	{% include "crud/tambahSiswa.twig" %}
+	{% include "crud/hapusSiswa.twig" %}
+
+{% endblock %}
+
+
+{% block js %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js" integrity="sha512-LW+1GKW2tt4kK180qby6ADJE0txk5/92P70Oh5YbtD7heFlC0qFFtacvSnHG4bNXmLnZq5hNb2V70r5DzS/U+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/js/home.js"></script>
+{% endblock %}
